@@ -1,14 +1,13 @@
 .age-calculator-container {
   background: white;
-  padding: 3rem;
-  border-radius: 20px 20px 150px 20px;
+  align-items: center;
   width: 100%;
   max-width: 700px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
 .input-container {
   display: flex;
+  
   gap: 1.5rem;
   padding-bottom: 3rem;
   border-bottom: 2px solid #f0f0f0;
@@ -22,143 +21,13 @@
   gap: 0.8rem;
 }
 
-.input-group label {
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-size: 0.7rem;
-  color: #6b6b6b;
-  font-weight: 700;
-}
-
-.input-group input {
-  width: 140px;
-  padding: 0.8rem 1.2rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  font-size: 1.5rem;
-  font-weight: 700;
-  font-family: 'Poppins', sans-serif;
-}
-
-.input-group input::placeholder {
-  color: #c0c0c0;
-  font-weight: 700;
-}
-
-.input-group input:focus {
-  outline: 1px solid #854dff;
-  border-color: #854dff;
-}
-
-.calculate-button {
-  background: #854dff;
-  border: none;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  position: absolute;
-  right: 0;
-  bottom: -35px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-}
-
-.calculate-button:hover {
-  background: #6b3dcc;
-  transform: scale(1.05);
-}
-
-.arrow {
-  width: 30px;
-  height: 30px;
-  filter: brightness(0) invert(1);
-}
-
-.calculate-button.error {
-  background: #ff5757;
-}
-
-.result-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.result-item {
-  line-height: 1.1;
-  margin-bottom: -1rem;
-}
-
 .number {
   color: #854dff;
-  font-size: 4.5rem;
-  font-weight: 800;
-  font-style: italic;
   margin-right: 0.8rem;
-  letter-spacing: -2px;
 }
 
 .label {
-  font-size: 4.5rem;
-  font-weight: 800;
-  font-style: italic;
   color: #151515;
-  letter-spacing: -2px;
 }
 
-/* Validação */
-.error {
-  color: #ff5757;
-  font-size: 0.8rem;
-  font-style: italic;
-  margin-top: 0.5rem;
-  font-weight: 400;
-}
 
-.input-group.error-input input {
-  border-color: #ff5757;
-}
-
-.input-group.error-input label {
-  color: #ff5757;
-}
-
-@media (max-width: 768px) {
-  .age-calculator-container {
-    padding: 2rem;
-    border-radius: 20px 20px 100px 20px;
-  }
-
-  .input-container {
-    gap: 1rem;
-    padding-bottom: 5rem;
-  }
-
-  .input-group input {
-    width: 100%;
-    max-width: 120px;
-    font-size: 1.2rem;
-    padding: 0.6rem 1rem;
-  }
-
-  .calculate-button {
-    width: 60px;
-    height: 60px;
-    right: 50%;
-    transform: translateX(50%);
-    bottom: -30px;
-  }
-
-  .arrow-icon {
-    width: 25px;
-    height: 25px;
-  }
-
-  .number,
-  .label {
-    font-size: 3.5rem;
-  }
-}
