@@ -10,9 +10,14 @@ const AgeCalculator = () => {
     e.preventDefault();
     const birthDate = new Date(`${date.year}-${date.month}-${date.day}`);
     const today = new Date();
-    
+
     if (isNaN(birthDate)) {
       alert('Data inválida!');
+      return;
+    }
+
+    if (birthDate > today) {
+      alert('A data de nascimento não pode estar no futuro!');
       return;
     }
 
@@ -32,7 +37,8 @@ const AgeCalculator = () => {
     }
 
     setResult({ years, months, days });
-  };
+};
+
 
   return (
     <div className="age-calculator-container">
