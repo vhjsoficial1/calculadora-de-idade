@@ -33,7 +33,7 @@ const App = () => {
       newErrors.year = 'This field is required';
       isValid = false;
     } else if (isNaN(date.year) || +date.year < 1900) {
-      newErrors.year = 'Ano inválido';
+      newErrors.year = 'Must be a year above 1900';
       isValid = false;
     } else if (+date.year > currentYear) {
       newErrors.year = 'Must be in the past';
@@ -54,7 +54,7 @@ const App = () => {
       newErrors.day = 'This field is required';
       isValid = false;
     } else if (isNaN(date.day)) {
-      newErrors.day = 'Dia inválido';
+      newErrors.day = 'Invalid day';
       isValid = false;
     } else {
       const maxDays = getMaxDays(date.month, date.year);
@@ -78,7 +78,7 @@ const App = () => {
     const today = new Date();
 
     if (birthDate > today) {
-      setErrors(prev => ({ ...prev, year: 'Data futura' }));
+      setErrors(prev => ({ ...prev, year: 'Future date' }));
       return;
     }
 
