@@ -1,0 +1,52 @@
+.result-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .result-item {
+    line-height: 1.1;
+    margin-bottom: -1rem;
+  }
+  
+  .number {
+    color: #854dff;
+    font-size: 4.5rem;
+    font-weight: 800;
+    font-style: italic;
+    margin-right: 0.8rem;
+    letter-spacing: -2px;
+  }
+  
+  .label {
+    font-size: 4.5rem;
+    font-weight: 800;
+    font-style: italic;
+    color: #151515;
+    letter-spacing: -2px;
+  }
+  
+/* Responsivo para 770px */
+@media (max-width: 770px) {
+    .number,
+    .label {
+      font-size: 3.8rem;
+      letter-spacing: -1px;
+    }
+  }
+  
+  /* Responsivo para 430px */
+  @media (max-width: 430px) {
+    .result-item {
+      margin-bottom: -0.5rem;
+    }
+  
+    .number,
+    .label {
+      font-size: 2.8rem;
+      line-height: 1;
+    }
+  
+    .number {
+      margin-right: 0.5rem;
+    }
+  }
